@@ -14,6 +14,7 @@ class App < Sinatra::Base
   
   post '/' do 
     @item = params['item']
+    binding.pry
     @session["item"] = @item
    erb :checkout
   end 
